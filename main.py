@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-# import pyodbc
+import pyodbc
 from pathlib import Path
 import csv
 import argparse
