@@ -27,15 +27,8 @@ if __name__ == "__main__":
     if args.parameters is not None:
         params = args.parameters.split(",")
 
-    if args.in_file is None:
-        query_path = Path("./query.sql").resolve()
-    else:
-        query_path = Path(args.in_file).resolve()
-
-    if args.out_file is None:
-        output_path = Path("./results.csv").resolve()
-    else:
-        output_path = Path(args.out_file).resolve()
+    query_path = Path(args.in_file).resolve()
+    output_path = Path(args.out_file).resolve()
 
     connection_string = f"DRIVER={os.environ['DRIVER']};SERVER={os.environ['SERVER']};DATABASE={os.environ['DATABASE']};UID={os.environ['UID']};PWD={os.environ['PWD']}"
 
